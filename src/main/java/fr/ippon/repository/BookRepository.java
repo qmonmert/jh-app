@@ -12,4 +12,7 @@ import java.util.List;
 @SuppressWarnings("unused")
 public interface BookRepository extends JpaRepository<Book,Long> {
 
+    List<Book> findAllByOrderByPriceDesc();
+    List<Book> findAllByOrderByPriceAsc();
+
 }

@@ -26,7 +26,7 @@ public class BookResource {
     private final Logger log = LoggerFactory.getLogger(BookResource.class);
 
     private static final String ENTITY_NAME = "book";
-        
+
     private final BookRepository bookRepository;
 
     public BookResource(BookRepository bookRepository) {
@@ -84,7 +84,8 @@ public class BookResource {
     @Timed
     public List<Book> getAllBooks() {
         log.debug("REST request to get all Books");
-        List<Book> books = bookRepository.findAll();
+//        List<Book> books = bookRepository.findAll();
+        List<Book> books = bookRepository.findAllByOrderByPriceAsc();
         return books;
     }
 
