@@ -1,0 +1,9 @@
+$my-red: red;
+$my-green: green;
+
+.my-paragraph {
+    color: $my-green;
+    .my-span {
+        color: $my-red;
+    }
+}
