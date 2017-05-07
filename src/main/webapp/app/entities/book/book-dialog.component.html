@@ -27,10 +27,10 @@
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="jhipsterApp.book.publicationDate" for="field_publicationDate">Publication Date</label>
             <div class="input-group">
-                <input id="field_publicationDate" type="text" class="form-control" name="publicationDate" ngbDatepicker  #publicationDateDp="ngbDatepicker" [(ngModel)]="book.publicationDate"
+                <input id="field_publicationDate" type="text" class="form-control" name="publicationDate" ngbDatepicker [(ngModel)]="book.publicationDate"
                 />
                 <span class="input-group-btn">
-                    <button type="button" class="btn btn-default" (click)="publicationDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                    <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
                 </span>
             </div>
         </div>
