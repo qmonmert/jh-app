@@ -14,7 +14,7 @@
         </dd>
         <dt><span jhiTranslate="jhipsterApp.stravaActivity.distance">Distance</span></dt>
         <dd>
-            <span>{{stravaActivity.distance}}</span>
+            <span>{{stravaActivity.distance | convertDistance | number:'1.0-1'}} kms</span>
         </dd>
         <dt><span jhiTranslate="jhipsterApp.stravaActivity.kudos_count">Kudos Count</span></dt>
         <dd>

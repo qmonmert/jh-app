@@ -28,6 +28,7 @@ public class StravaActivityResource {
 
     private final static String STRAVA_URL = "https://www.strava.com/api/v3";
     private final static String ACCESS_TOKEN = "7352ab3baeb484779ced1f9a35c03bcd4340a403";
+    private static final Integer NB_ACTIVITIES = 20;
 
     private final Logger log = LoggerFactory.getLogger(StravaActivityResource.class);
 
@@ -43,7 +44,7 @@ public class StravaActivityResource {
         log.debug("REST request to get all StravaActivities");
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<StravaActivity[]> response = restTemplate.getForEntity(
-            STRAVA_URL + "/athlete/activities?access_token=" + ACCESS_TOKEN + "&page=1&per_page=5",
+            STRAVA_URL + "/athlete/activities?access_token=" + ACCESS_TOKEN + "&page=1&per_page=" + NB_ACTIVITIES,
             StravaActivity[].class
         );
         log.info(response.getBody().toString());

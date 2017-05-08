@@ -15,6 +15,8 @@ import {
     stravaActivityPopupRoute,
 } from './';
 
+import { ConvertDistancePipe } from './convert-distance.pipe';
+
 const ENTITY_STATES = [
     ...stravaActivityRoute,
     ...stravaActivityPopupRoute,
@@ -32,6 +34,7 @@ const ENTITY_STATES = [
         StravaActivityDeleteDialogComponent,
         StravaActivityPopupComponent,
         StravaActivityDeletePopupComponent,
+ConvertDistancePipe
     ],
     entryComponents: [
         StravaActivityComponent,

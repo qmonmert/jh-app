@@ -22,7 +22,7 @@
                     <a [routerLink]="['../strava-activity', stravaActivity.id ]">{{stravaActivity.name}}</a>
                 </td>
                 <td>{{stravaActivity.type}}</td>
-                <td>{{stravaActivity.distance}}</td>
+                <td>{{stravaActivity.distance | convertDistance | number:'1.0-1'}}</td>
                 <td>{{stravaActivity.kudos_count}}</td>
             </tr>
             </tbody>
