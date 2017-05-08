@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "distance",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "kudos_count",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170508135135",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "strava_activity",
+    "pagination": "no"
+}

@@ -45,6 +45,7 @@ public class CacheConfiguration {
             cm.createCache(fr.ippon.domain.Author.class.getName(), jcacheConfiguration);
             cm.createCache(fr.ippon.domain.Author.class.getName() + ".books", jcacheConfiguration);
             cm.createCache(fr.ippon.domain.Book.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.ippon.domain.StravaActivity.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

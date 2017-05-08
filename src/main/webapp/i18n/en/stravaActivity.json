@@ -1,0 +1,24 @@
+{
+    "jhipsterApp": {
+        "stravaActivity" : {
+            "home": {
+                "title": "Strava Activities",
+                "createLabel": "Create a new Strava Activity",
+                "createOrEditLabel": "Create or edit a Strava Activity"
+            },
+            "created": "A new Strava Activity is created with identifier {{ param }}",
+            "updated": "A Strava Activity is updated with identifier {{ param }}",
+            "deleted": "A Strava Activity is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Strava Activity {{ id }}?"
+            },
+            "detail": {
+                "title": "Strava Activity"
+            },
+            "name": "Name",
+            "type": "Type",
+            "distance": "Distance",
+            "kudos_count": "Kudos Count"
+        }
+    }
+}
