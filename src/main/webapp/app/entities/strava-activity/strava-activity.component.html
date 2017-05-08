@@ -1,12 +1,6 @@
 <div>
     <h2>
         <span jhiTranslate="jhipsterApp.stravaActivity.home.title">Strava Activities</span>
-        <button class="btn btn-primary float-right create-strava-activity" [routerLink]="['/', { outlets: { popup: ['strava-activity-new'] } }]">
-            <span class="fa fa-plus"></span>
-            <span  jhiTranslate="jhipsterApp.stravaActivity.home.createLabel">
-            Create new Strava Activity
-            </span>
-        </button>
     </h2>
     <jhi-alert></jhi-alert>
     <div class="row">
@@ -16,45 +10,20 @@
         <table class="table table-striped">
             <thead>
             <tr>
-            <th><span jhiTranslate="global.field.id">ID</span></th>
-            <th><span jhiTranslate="jhipsterApp.stravaActivity.name">Name</span></th>
-            <th><span jhiTranslate="jhipsterApp.stravaActivity.type">Type</span></th>
-            <th><span jhiTranslate="jhipsterApp.stravaActivity.distance">Distance</span></th>
-            <th><span jhiTranslate="jhipsterApp.stravaActivity.kudos_count">Kudos Count</span></th>
-            <th></th>
+                <th><span jhiTranslate="jhipsterApp.stravaActivity.name">Name</span></th>
+                <th><span jhiTranslate="jhipsterApp.stravaActivity.type">Type</span></th>
+                <th><span jhiTranslate="jhipsterApp.stravaActivity.distance">Distance</span></th>
+                <th><span jhiTranslate="jhipsterApp.stravaActivity.kudos_count">Kudos Count</span></th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let stravaActivity of stravaActivities ;trackBy: trackId">
-                <td><a [routerLink]="['../strava-activity', stravaActivity.id ]">{{stravaActivity.id}}</a></td>
-                <td>{{stravaActivity.name}}</td>
+                <td>
+                    <a [routerLink]="['../strava-activity', stravaActivity.id ]">{{stravaActivity.name}}</a>
+                </td>
                 <td>{{stravaActivity.type}}</td>
                 <td>{{stravaActivity.distance}}</td>
                 <td>{{stravaActivity.kudos_count}}</td>
-                <td class="text-right">
-                    <div class="btn-group flex-btn-group-container">
-                        <button type="submit"
-                                [routerLink]="['../strava-activity', stravaActivity.id ]"
-                                class="btn btn-info btn-sm">
-                            <span class="fa fa-eye"></span>
-                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
-                        </button>
-                        <button type="submit"
-                                [routerLink]="['/', { outlets: { popup: 'strava-activity/'+ stravaActivity.id + '/edit'} }]"
-                                replaceUrl="true"
-                                class="btn btn-primary btn-sm">
-                            <span class="fa fa-pencil"></span>
-                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
-                        </button>
-                        <button type="submit"
-                                [routerLink]="['/', { outlets: { popup: 'strava-activity/'+ stravaActivity.id + '/delete'} }]"
-                                replaceUrl="true"
-                                class="btn btn-danger btn-sm">
-                            <span class="fa fa-remove"></span>
-                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
-                        </button>
-                    </div>
-                </td>
             </tr>
             </tbody>
         </table>

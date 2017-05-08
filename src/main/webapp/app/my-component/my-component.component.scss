@@ -3,6 +3,8 @@ $my-green: green;
 
 .my-paragraph {
     color: $my-green;
+    font-size: 9px;
+    text-align: right;
     .my-span {
         color: $my-red;
     }
