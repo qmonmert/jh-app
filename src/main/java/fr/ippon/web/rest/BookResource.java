@@ -84,7 +84,19 @@ public class BookResource {
     @Timed
     public List<Book> getAllBooks() {
         log.debug("REST request to get all Books");
-//        List<Book> books = bookRepository.findAll();
+        List<Book> books = bookRepository.findAll();
+        return books;
+    }
+
+    /**
+     * GET  /books/orderby/asc : get all the books order by asc.
+     *
+     * @return the ResponseEntity with status 200 (OK) and the list of books in body
+     */
+    @GetMapping("/books/orderby/asc")
+    @Timed
+    public List<Book> getAllBooksByPriceAsc() {
+        log.debug("REST request to get all Books order by asc");
         List<Book> books = bookRepository.findAllByOrderByPriceAsc();
         return books;
     }
